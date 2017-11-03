@@ -1,0 +1,118 @@
+@import url('itool.less');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    .padding(0);
+}
+html,body{
+   .padding(0);
+    margin: 0;
+    .bg(#f2f4f5);
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    width: 100%;
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+    .padding(0);
+    margin: 0;
+    .normal;
+}
+li{
+    list-style: none;
+}
+img{
+    border: 0 none;
+    .display;
+}
+a{
+    .display;
+    text-decoration: none;
+    .color;
+    .fontSize;
+}
+// 颜色常用
+@nBlur: #368ee0;
+@nWhite: #fff;
+// 重置ele的样式
+#app .el-button{
+    &--primary{
+        .color(@nWhite);
+        .bg(@nBlur);
+        border-color: @nBlur;
+        &:hover{
+            .bg(#006dd3);
+            border-color: #006dd3;
+        }
+        &:focus{
+            .bg(#006dd3);
+            border-color: #006dd3;
+        }
+    }
+}
+#app .el-table{
+    .reduis;
+    .cell {
+        padding-right: 0;
+        padding-left: 0;
+        .algin(c);
+        .fontSize(12px);
+        .color;
+        .oneLine;
+    }
+}
+#app .el-menu{
+    border-right: 0 none;
+}
+// 通用样式
+// -----> 小方块
+._height14(@top:34px){
+    width: 4px;
+    height: 14px;
+    .position(a);
+    left: 0;
+    top: @top;
+    .bg(@nBlur);
+}
+// -----> 查询条件
+.form_group{
+    padding: 20px 20px 0 20px;
+    .paddingAll(20px,20px,0,20px);
+    .position(r);
+    .bg(@nWhite);
+    width: 96%;
+    margin: 0 auto;
+    .reduis;
+}
+// -----> 新增或者其他按钮
+.add_group{
+    width: 96%;
+    margin: 20px auto 0;
+    .bg(@nWhite);
+    border-radius: 5px 5px 0 0;
+    padding: 20px 20px 0;
+    .position(r);
+}
+// -----> 表格数据
+.table_group {
+    width: 96%;
+    margin: 0 auto 20px;
+    .bg(@nWhite);
+    border-radius: 0 0 5px 5px;
+    .padding(20px);
+    .position(r);
+}
+// -----> 分页数据
+.page_group{
+    padding: 0 18px;
+    .algin(r);
+    .position(a);
+    bottom: 20px;
+    right: 0;
+}
+// 公共样式
+#app{
+    height: 100%;
+    .position(r);
+}
+// 头部

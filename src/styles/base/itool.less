@@ -1,0 +1,131 @@
+//浮动清除浮动
+.float(l) {
+    float: left;
+}
+.float(r) {
+    float: right;
+}
+.clearfix(){
+    *zoom: 1;
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+// 定位
+.position(r) {
+    position: relative;
+}
+.position(a) {
+    position: absolute;
+}
+.position(f) {
+    position: fixed;
+}
+
+// 方向
+.algin(l) {
+    text-align: left;
+}
+.algin(r) {
+    text-align: right;
+}
+.algin(c) {
+    text-align: center;
+}
+
+// 改变
+.display(@play: block){
+    display: @play;
+}
+
+// 字体大小
+.fontSize(@size:14px) {
+    font-size: @size;
+}
+
+// 文字粗细
+.blod() {
+    font-weight: bold;
+}
+.normal(){
+    font-weight: normal;
+}
+
+
+// 行高
+.line(@line:12px) {
+    line-height: @line;
+}
+
+
+//颜色
+.color(@col:#333) {
+    color: @col;
+}
+
+
+// padding值
+
+.padding(@p) {
+    padding: @p;
+}
+.paddingL(@p){
+    padding-left: @p;
+}
+.paddingR(@p){
+    padding-right: @p;
+}
+.paddingT(@p){
+    padding-top: @p;
+}
+.paddingB(@p){
+    padding-bottom: @p;
+}
+.paddingAll(@t,@r,@b,@l) {
+    padding: @t @r @b @l;
+}
+.marginR(@px:10px){
+    margin-right: @px;
+}
+.marginL(@px:10px){
+    margin-left: @px;
+}
+
+// 背景色
+.bg(@bg) {
+    background-color: @bg;
+}
+
+// 字体图标
+.iconFont() {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 8px;
+}
+
+// 一行不换行显示省略号
+.oneLine(){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+// 多行换行显示省略号
+.moreLine(@line:2){
+    .display(-webkit-box);
+    -webkit-line-clamp: @line;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+// 圆角
+.reduis(@ret:4px){
+    border-radius: @ret;
+}
